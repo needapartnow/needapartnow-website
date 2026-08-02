@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Need A Part Now favicon">
+  <rect width="512" height="512" fill="#fff"/>
+  <g fill="none" stroke="#a6a6aa" stroke-width="10" stroke-linecap="round">
+    <path d="M256 46v82M256 154v94M58 180h142M312 180h142"/>
+    <path d="M156 230a105 105 0 1 1 200 0"/>
+  </g>
+  <rect x="241" y="165" width="30" height="30" fill="#ff7800"/>
+  <text x="256" y="438" fill="#ff7800" font-family="Arial Black, Arial, sans-serif" font-size="164" font-weight="900" text-anchor="middle">NOW</text>
+</svg>
