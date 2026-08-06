@@ -992,6 +992,29 @@ footer small {
   height: auto;
   width: 100%;
 }
+.product-video-section {
+  background: #080c0a;
+  text-align: center;
+}
+.product-video-section h2 {
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  letter-spacing: -0.04em;
+  line-height: 0.96;
+  text-transform: uppercase;
+}
+.product-video-frame {
+  aspect-ratio: 9 / 16;
+  background: #000;
+  border: 1px solid var(--line);
+  margin: 2.5rem auto 0;
+  max-width: 420px;
+}
+.product-video-frame iframe {
+  border: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
 .product-detail-section {
   background: var(--panel);
 }
