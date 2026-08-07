@@ -1122,3 +1122,12 @@ footer small {
     min-height: 240px;
   }
 }
+
+/* Chip Screen Spider product and installation pages */
+.product-detail-hero-with-image{align-items:center;display:grid;gap:clamp(2rem,5vw,5rem);grid-template-columns:minmax(0,1fr) minmax(320px,.9fr)}
+.product-main-photo{margin:0}.product-main-photo img,.tools-panel img,.install-step img{border:1px solid var(--line);display:block;height:auto;width:100%}.product-main-photo figcaption{color:var(--muted);font-size:.9rem;margin-top:.65rem}
+.install-hero{padding-bottom:2rem;padding-top:150px}.install-hero h1{margin-bottom:1rem}.install-video{padding-bottom:4rem;padding-top:0}.shorts-video-frame{aspect-ratio:9/16;margin:0 auto;max-height:78vh;max-width:440px;overflow:hidden}.shorts-video-frame iframe{border:0;height:100%;width:100%}.install-content{padding-top:2rem}
+.safety-warning{background:#201508;border:2px solid #ff9d00;margin-bottom:3rem;padding:clamp(1.25rem,3vw,2rem)}.safety-warning p:last-child{line-height:1.65;margin-bottom:0}
+.tools-panel,.install-step{align-items:center;display:grid;gap:clamp(1.5rem,4vw,4rem);grid-template-columns:minmax(0,.8fr) minmax(320px,1.2fr)}.tools-panel{background:var(--panel);border:1px solid var(--line);margin-bottom:4rem;padding:clamp(1.25rem,3vw,2rem)}.tools-panel ul{line-height:1.9;padding-left:1.25rem}
+.install-steps{display:grid;gap:2rem}.install-step{background:var(--panel);border:1px solid var(--line);padding:clamp(1.25rem,3vw,2rem)}.install-step>div>span{align-items:center;background:var(--green);border-radius:50%;color:var(--ink);display:inline-flex;font-size:1.2rem;font-weight:900;height:2.5rem;justify-content:center;margin-bottom:.75rem;width:2.5rem}.install-step h2{font-size:clamp(1.35rem,2.4vw,2rem);margin:0 0 .75rem}.install-step p{color:#d1d5d1;line-height:1.65;margin:0}.install-footer-action{margin-top:2rem}
+@media(max-width:800px){.product-detail-hero-with-image,.tools-panel,.install-step{grid-template-columns:1fr}.product-main-photo,.install-step img{grid-row:1}.install-hero{padding-top:125px}}
