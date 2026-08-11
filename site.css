@@ -6,8 +6,9 @@
   --line: #2a342e;
   --paper: #f0f1ed;
   --muted: #aab0aa;
-  --green: #8fbd3f;
+  --green: #b8ff00;
   --green-dark: #6f942f;
+  --green-on-light: #315d24;
 }
 
 * {
@@ -1021,6 +1022,16 @@ footer small {
 .product-detail-section.alt {
   background: var(--paper);
   color: var(--ink);
+}
+.product-detail-section.alt .eyebrow,
+.product-detail-section.alt .detail-columns h3,
+.product-detail-section.alt .fitment-list strong {
+  color: var(--green-on-light);
+}
+.truth .eyebrow,
+.affiliate-note .eyebrow,
+.storefront-page .storefront-about .eyebrow {
+  color: var(--green-on-light);
 }
 .product-detail-section h2 {
   font-size: clamp(2.5rem, 5vw, 5rem);
