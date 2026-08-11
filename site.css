@@ -6,8 +6,8 @@
   --line: #2a342e;
   --paper: #f0f1ed;
   --muted: #aab0aa;
-  --green: #b8ff00;
-  --green-dark: #87bc00;
+  --green: #8fbd3f;
+  --green-dark: #6f942f;
 }
 
 * {
@@ -192,7 +192,7 @@ h3 {
 
 .button-primary:hover,
 .button-primary:focus-visible {
-  background: #ceff4f;
+  background: #a6d45a;
 }
 
 .button-secondary {
