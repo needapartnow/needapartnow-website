@@ -1142,3 +1142,77 @@ footer small {
 .tools-panel,.install-step{align-items:center;display:grid;gap:clamp(1.5rem,4vw,4rem);grid-template-columns:minmax(0,.8fr) minmax(320px,1.2fr)}.tools-panel{background:var(--panel);border:1px solid var(--line);margin-bottom:4rem;padding:clamp(1.25rem,3vw,2rem)}.tools-panel ul{line-height:1.9;padding-left:1.25rem}
 .install-steps{display:grid;gap:2rem}.install-step{background:var(--panel);border:1px solid var(--line);padding:clamp(1.25rem,3vw,2rem)}.install-step>div>span{align-items:center;background:var(--green);border-radius:50%;color:var(--ink);display:inline-flex;font-size:1.2rem;font-weight:900;height:2.5rem;justify-content:center;margin-bottom:.75rem;width:2.5rem}.install-step h2{font-size:clamp(1.35rem,2.4vw,2rem);margin:0 0 .75rem}.install-step p{color:#d1d5d1;line-height:1.65;margin:0}.install-footer-action{margin-top:2rem}
 @media(max-width:800px){.product-detail-hero-with-image,.tools-panel,.install-step{grid-template-columns:1fr}.product-main-photo,.install-step img{grid-row:1}.install-hero{padding-top:125px}}
+
+
+/* Knife sharpening training page */
+.training-page .site-header {
+  position: relative;
+}
+.training-hero {
+  background:
+    radial-gradient(circle at 82% 30%, rgba(184, 255, 0, 0.12), transparent 27rem),
+    linear-gradient(135deg, #050807 0%, #0c120f 100%);
+  padding: clamp(4rem, 8vw, 7rem) 5vw;
+}
+.training-hero h1 {
+  font-size: clamp(3rem, 7vw, 7rem);
+  font-style: italic;
+  letter-spacing: -0.05em;
+  line-height: 0.92;
+  margin: 1rem 0 1.5rem;
+  text-transform: uppercase;
+}
+.training-hero p:last-child {
+  color: var(--muted);
+  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+  line-height: 1.7;
+  max-width: 800px;
+}
+.training-video-section {
+  background: #080c0a;
+  border-top: 4px solid var(--green);
+  padding: clamp(3rem, 6vw, 6rem) 5vw;
+}
+.training-video-frame {
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border: 1px solid var(--line);
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+.training-video-frame iframe {
+  border: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.training-products {
+  background: var(--paper);
+  color: var(--ink);
+  padding: clamp(4rem, 8vw, 7rem) 5vw;
+}
+.training-products .eyebrow {
+  color: var(--green-on-light);
+}
+.training-products h2 {
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  letter-spacing: -0.04em;
+  line-height: 0.96;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+.training-products > p:last-child {
+  color: #3d433f;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  max-width: 760px;
+}
+@media (max-width: 760px) {
+  .training-hero,
+  .training-video-section,
+  .training-products {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
