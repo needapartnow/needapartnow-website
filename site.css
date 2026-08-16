@@ -459,6 +459,14 @@ footer small {
   transform: translateY(-2px);
 }
 
+.product-link img {
+  border: 1px solid var(--line);
+  display: block;
+  height: auto;
+  margin-bottom: 1.2rem;
+  width: 100%;
+}
+
 .product-link strong,
 .product-link small,
 .product-link b {
