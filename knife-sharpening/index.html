@@ -7,7 +7,20 @@
   <meta name="description" content="Watch Jesse teach his mom how to sharpen a knife from start to finish in this full-length Need A Part Now training video.">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../site.css">
-</head>
+<style>
+.sharpener-overview .overview-intro{color:#3d433f;font-size:1.08rem;line-height:1.7;max-width:780px}
+.family-photo{margin:2.5rem 0 4rem}.family-photo img{border:1px solid #b8bdb8;display:block;height:auto;width:100%}.family-photo figcaption{color:#555d57;font-size:.9rem;line-height:1.5;margin-top:.7rem}
+.sharpener-card-grid{display:grid;gap:2rem;grid-template-columns:repeat(2,minmax(0,1fr))}
+.sharpener-card{background:#0b100d;border:1px solid #303832;color:#f2f4f1;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);overflow:hidden}
+.sharpener-card>img{display:block;height:100%;min-height:330px;object-fit:cover;width:100%}
+.sharpener-card>div{padding:clamp(1.4rem,3vw,2.3rem)}
+.sharpener-card h3{font-size:clamp(2rem,3.5vw,3.4rem);font-style:italic;line-height:1;margin:.5rem 0 1rem;text-transform:uppercase}
+.sharpener-card>div>p:not(.eyebrow){color:#b8beb9;line-height:1.65}
+.sharpener-card strong{color:var(--green);display:block;margin:1.4rem 0}
+.sharpener-card .button{width:auto}
+@media(max-width:1050px){.sharpener-card-grid{grid-template-columns:1fr}}
+@media(max-width:620px){.sharpener-card{grid-template-columns:1fr}.sharpener-card>img{height:auto;min-height:0}.family-photo{margin-bottom:3rem}}
+</style></head>
 <body>
 <main class="training-page">
   <header class="site-header tools-header">
@@ -35,10 +48,61 @@
     </div>
   </section>
 
-  <section class="training-products" id="sharpeners">
-    <p class="eyebrow">SHARPENING SYSTEMS</p>
-    <h2>Sharpeners Used in the Video</h2>
-    <p>Individual sharpener details and purchase links are coming soon.</p>
+  <section class="training-products sharpener-overview" id="sharpeners">
+    <p class="eyebrow">KNIFE SHARPENING SYSTEMS</p>
+    <h2>Meet the Family</h2>
+    <p class="overview-intro">Four practical sharpening systems, from the complete flagship kit to simple two-sided sharpeners. Choose a model to see exactly what is included.</p>
+
+    <figure class="family-photo">
+      <img src="images/sharpener-family.jpg" alt="Susie, Grandma Patsy, Jamesy and Cousin Louie knife sharpeners">
+      <figcaption>Left to right: Grandma Patsy and Susie in front, with Jamesy and Cousin Louie behind them.</figcaption>
+    </figure>
+
+    <div class="sharpener-card-grid">
+      <article class="sharpener-card">
+        <img src="images/susie-standard.jpg" alt="Susie translucent pink knife sharpening system with light brown leather strop">
+        <div>
+          <p class="eyebrow">FLAGSHIP SYSTEM</p>
+          <h3>Susie</h3>
+          <p>Five removable plates from 320 to 3,000 grit, storage base and leather strop. Built for knives around the house and in the kitchen.</p>
+          <strong>$65.99 · Free shipping</strong>
+          <a class="button" href="susie/">View Susie</a>
+        </div>
+      </article>
+
+      <article class="sharpener-card">
+        <img src="images/grandma-patsy-holder-back.jpg" alt="Grandma Patsy translucent purple knife sharpener holder">
+        <div>
+          <p class="eyebrow">ALL-AROUND SYSTEM</p>
+          <h3>Grandma Patsy</h3>
+          <p>Five removable plates from 240 to 1,500 grit with a storage base. Made for all-around household and pocket-knife sharpening.</p>
+          <strong>$55.99 · Free shipping</strong>
+          <a class="button" href="grandma-patsy/">View Grandma Patsy</a>
+        </div>
+      </article>
+
+      <article class="sharpener-card">
+        <img src="images/jamesy-600-installed.jpg" alt="Jamesy translucent light-blue sharpener with installed 600 grit plate">
+        <div>
+          <p class="eyebrow">TOUGH AND SIMPLE</p>
+          <h3>Jamesy</h3>
+          <p>Two permanently installed plates: 600 grit and 1,200 grit. No base, strop or loose parts.</p>
+          <strong>$45.99 · Free shipping</strong>
+          <a class="button" href="jamesy/">View Jamesy</a>
+        </div>
+      </article>
+
+      <article class="sharpener-card">
+        <img src="images/cousin-louie-800-installed.jpg" alt="Cousin Louie translucent light-green sharpener with installed 800 grit plate">
+        <div>
+          <p class="eyebrow">ENTRY-LEVEL SHARPENER</p>
+          <h3>Cousin Louie</h3>
+          <p>Two permanently installed plates: 800 grit and 1,500 grit. The simplest, lowest-cost model in the family.</p>
+          <strong>$35.99 · Free shipping</strong>
+          <a class="button" href="cousin-louie/">View Cousin Louie</a>
+        </div>
+      </article>
+    </div>
   </section>
 
   <footer>
