@@ -14,6 +14,8 @@
     .checkout-result-card>p:not(.eyebrow){color:#d5d9d5;font-size:1.1rem;line-height:1.7;max-width:650px}
     .checkout-result-card .button{margin-top:1.25rem}
   </style>
+  <link rel="stylesheet" href="../cart.css">
+  <script src="../cart.js" defer></script>
 </head>
 <body>
 <main class="training-page">
@@ -23,12 +25,12 @@
       <span>NEED A PART NOW</span>
     </a>
     <nav>
-      <a href="https://needapartnow.etsy.com">Shop on Etsy</a>
+
       <a href="../knife-sharpening/">Sharpening</a>
       <a href="../machining/">Machining</a>
       <a href="../tools/">Things I Use</a>
     </nav>
-  </header>
+  <a class="header-cart cart-link" href="../cart/" aria-label="View cart"><span data-cart-count hidden>0</span></a></header>
 
   <section class="checkout-result">
     <div class="checkout-result-card">
@@ -46,7 +48,7 @@
     </a>
     <p>Products, practical projects, and precision machining.</p>
     <div>
-      <a href="https://needapartnow.etsy.com">Shop on Etsy</a>
+
       <a href="../machining/">Machining</a>
       <a href="../tools/">Things I Use</a>
       <a href="mailto:jesse@needapartnow.com">sales@needapartnow.com</a>
