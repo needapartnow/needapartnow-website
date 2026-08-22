@@ -46,6 +46,20 @@
     const count = cart.reduce((sum, line) => sum + Number(line.quantity || 0), 0);
     document.querySelectorAll("[data-cart-count]").forEach((node) => {
       node.textContent = String(count);
+      node.hidden = count === 0;
+    });
+    document.querySelectorAll(".cart-link").forEach((link) => {
+      link.setAttribute("aria-label", `View cart, ${count} item${count === 1 ? "" : "s"}`);
+    });
+  }
+
+  function prepareCartLinks() {
+    document.querySelectorAll(".cart-link").forEach((link) => {
+      link.innerHTML = `<svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <path d="M3 5h3l3 15h15l3-10H8"></path>
+        <circle cx="12" cy="25" r="2"></circle>
+        <circle cx="23" cy="25" r="2"></circle>
+      </svg><span class="cart-count-badge" data-cart-count hidden>0</span><span class="cart-sr-only">View cart</span>`;
     });
   }
 
@@ -235,6 +249,7 @@
   }
 
   document.addEventListener("DOMContentLoaded", () => {
+    prepareCartLinks();
     populateStockedColors();
     document.querySelectorAll("[data-cart-product]").forEach((form) => {
       updateOptionFields(form);
