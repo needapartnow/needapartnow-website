@@ -123,7 +123,7 @@
 
   function addToCart(button) {
     const form = button.closest("[data-cart-product]");
-    const sku = button.dataset.cartSku;
+    const sku = button.dataset.cartSku || form?.querySelector("[data-cart-delivery]:checked")?.value;
     const item = CATALOG[sku];
     if (!form || !item) return;
     const invalidField = Array.from(form.querySelectorAll("input, select"))
@@ -256,7 +256,7 @@
       form.addEventListener("change", () => updateOptionFields(form));
     });
     document.addEventListener("click", (event) => {
-      const addButton = event.target.closest("[data-cart-sku]");
+      const addButton = event.target.closest("[data-cart-add], [data-cart-sku]");
       if (addButton) addToCart(addButton);
       const removeButton = event.target.closest("[data-cart-remove]");
       if (removeButton) {
