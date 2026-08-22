@@ -7,7 +7,11 @@
 .cart-buy-box button,.cart-checkout-button{cursor:pointer}
 .cart-status{color:var(--green);font-weight:700;min-height:1.5em;margin:.9rem 0 0}
 .cart-error{color:#ff9f8f!important}
-.cart-link{background:transparent!important;color:var(--green)!important}
+.cart-link{align-items:center;background:transparent!important;border:1px solid var(--green)!important;display:inline-flex!important;height:52px;justify-content:center;padding:0!important;position:relative;width:58px}
+.cart-link svg{fill:none;height:31px;stroke:var(--green);stroke-linecap:round;stroke-linejoin:round;stroke-width:2.5;width:31px}
+.cart-count-badge{align-items:center;background:#d92d20;border:2px solid #101612;border-radius:999px;color:#fff;display:flex;font-size:.75rem;font-weight:900;height:23px;justify-content:center;min-width:23px;padding:0 5px;position:absolute;right:-9px;top:-10px}
+.cart-count-badge[hidden]{display:none}
+.cart-sr-only{height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;clip:rect(0,0,0,0);white-space:nowrap}
 .cart-page-section{background:#eef0ed;color:#171c18;min-height:60vh;padding:clamp(3rem,8vw,7rem) clamp(1.25rem,6vw,6rem)}
 .cart-page-section .eyebrow{color:#496600}
 .cart-page-header p{color:#3f4941}
