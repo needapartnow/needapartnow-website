@@ -22,7 +22,7 @@
     "jamesy-shipped": { name: "Jamesy Knife Sharpener", price: 4599, fulfillment: "shipped", options: "single-body" },
     "jamesy-pickup": { name: "Jamesy Knife Sharpener — Local Pickup", price: 3599, fulfillment: "pickup", options: "single-body" },
     "cousin-louie-shipped": { name: "Cousin Louie Knife Sharpener", price: 3599, fulfillment: "shipped", options: "single-body" },
-    "cousin-louie-pickup": { name: "Cousin Louie Knife Sharpener — Local Pickup", price: 2599, fulfillment: "pickup", options: "single-body" },
+    "cousin-louie-pickup": { name: "Cousin Louie Knife Sharpener — Local Pickup", price: 2999, fulfillment: "pickup", options: "single-body" },
     "go-fer-stick-shipped": { name: "Go-Fer Stick", price: 3999, fulfillment: "shipped", options: "none" },
     "go-fer-stick-pickup": { name: "Go-Fer Stick — Local Pickup", price: 2999, fulfillment: "pickup", options: "none" },
     "chip-screen-spider-shipped": { name: "Chip Screen Spider", price: 5500, fulfillment: "shipped", options: "none" },
