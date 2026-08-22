@@ -153,6 +153,7 @@
       cart.push(newLine);
     }
     saveCart(cart);
+    setStatus(form, `${item.name} added to your cart.`);
   }
 
   function populateStockedColors() {
