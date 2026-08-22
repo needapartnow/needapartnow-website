@@ -12,6 +12,10 @@
     .checkout-result-card{background:#0b100d;border:1px solid #303832;color:#f2f4f1;max-width:850px;padding:clamp(2rem,6vw,5rem);width:100%}
     .checkout-result-card h1{font-size:clamp(3rem,8vw,6.5rem);font-style:italic;line-height:.95;margin:.5rem 0 1.5rem;text-transform:uppercase}
     .checkout-result-card>p:not(.eyebrow){color:#d5d9d5;font-size:1.1rem;line-height:1.7;max-width:650px}
+    .order-next-steps{border-left:3px solid var(--green);margin-top:2rem;padding:.25rem 0 .25rem 1.25rem}
+    .order-next-steps h2{font-size:1.35rem;margin:0 0 .65rem;text-transform:uppercase}
+    .order-next-steps p{color:#d5d9d5;line-height:1.65;margin:.35rem 0}
+    .order-next-steps strong{color:#fff}
     .checkout-result-card .button{margin-top:1.25rem}
   </style>
 </head>
@@ -35,6 +39,21 @@
       <p class="eyebrow">PURCHASE COMPLETE</p>
       <h1>Thank You for Your Purchase</h1>
       <p>Your payment was successful. We appreciate your business.</p>
+      <div class="order-next-steps" id="pickup-details" hidden>
+        <h2>Local Pickup</h2>
+        <p><strong>Please wait until we notify you that your order is ready.</strong></p>
+        <p>Need A Part Now<br>10670 FM 1484<br>Conroe, TX 77303</p>
+        <p>Pickup hours: Monday–Friday, 7:00 AM–2:30 PM.</p>
+      </div>
+      <div class="order-next-steps" id="shipping-details" hidden>
+        <h2>Shipping Timeline</h2>
+        <p>Regular orders ship within 2–3 business days.</p>
+        <p>Custom orders ship within 5–7 business days.</p>
+      </div>
+      <div class="order-next-steps" id="general-details" hidden>
+        <h2>What Happens Next</h2>
+        <p>We will contact you with order updates.</p>
+      </div>
       <a class="button" href="../">Continue Viewing Our Website</a>
     </div>
   </section>
@@ -54,5 +73,14 @@
     <small>© 2026 NEEDAPARTNOW.COM · All rights reserved.</small>
   </footer>
 </main>
+<script>
+  const fulfillment = new URLSearchParams(window.location.search).get("fulfillment");
+  const detailsId = fulfillment === "pickup"
+    ? "pickup-details"
+    : fulfillment === "shipped"
+      ? "shipping-details"
+      : "general-details";
+  document.getElementById(detailsId).hidden = false;
+</script>
 </body>
 </html>
