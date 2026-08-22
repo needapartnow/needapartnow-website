@@ -75,7 +75,7 @@
   </footer>
 </main>
 <script>
-  const fulfillment = new URLSearchParams(window.location.search).get("fulfillment");
+  const checkoutParams = new URLSearchParams(window.location.search);\n  const fulfillment = checkoutParams.get("fulfillment");\n  if (checkoutParams.get("session_id")) localStorage.removeItem("needapartnow-cart-v1");
   const detailsId = fulfillment === "pickup"
     ? "pickup-details"
     : fulfillment === "shipped"
