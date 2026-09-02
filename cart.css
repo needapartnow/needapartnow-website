@@ -44,6 +44,5 @@
 .cart-delivery-choice input{accent-color:var(--green);height:1.25rem;width:1.25rem}
 .cart-delivery-choice span{align-items:center;display:flex;gap:1rem;justify-content:space-between;width:100%}
 .cart-delivery-choice small{color:#d5d9d5;font-size:.95rem}
-.paypal-shipping-button{align-items:center;justify-content:center;min-height:58px;width:min(100%,520px)}
 .header-cart{flex:0 0 58px;margin-left:clamp(.75rem,2vw,1.5rem)}
 @media(max-width:760px){.cart-add-button{width:100%!important}.cart-delivery-choice span{align-items:flex-start;flex-direction:column;gap:.25rem}.header-cart{height:46px;width:50px}.header-cart svg{height:27px;width:27px}.site-header nav{gap:.75rem}.site-header nav a{font-size:.72rem}}
