@@ -16,15 +16,10 @@
   ];
   const CATALOG = {
     "susie-shipped": { name: "Susie Knife Sharpener", price: 6599, fulfillment: "shipped", options: "two-component-strop" },
-    "susie-pickup": { name: "Susie Knife Sharpener — Local Pickup", price: 5599, fulfillment: "pickup", options: "two-component-strop" },
     "grandma-patsy-shipped": { name: "Grandma Patsy Knife Sharpener", price: 5599, fulfillment: "shipped", options: "two-component" },
-    "grandma-patsy-pickup": { name: "Grandma Patsy Knife Sharpener — Local Pickup", price: 4599, fulfillment: "pickup", options: "two-component" },
     "jamesy-shipped": { name: "Jamesy Knife Sharpener", price: 4599, fulfillment: "shipped", options: "single-body" },
-    "jamesy-pickup": { name: "Jamesy Knife Sharpener — Local Pickup", price: 3599, fulfillment: "pickup", options: "single-body" },
     "cousin-louie-shipped": { name: "Cousin Louie Knife Sharpener", price: 3599, fulfillment: "shipped", options: "single-body" },
-    "cousin-louie-pickup": { name: "Cousin Louie Knife Sharpener — Local Pickup", price: 2999, fulfillment: "pickup", options: "single-body" },
     "go-fer-stick-shipped": { name: "Go-Fer Stick", price: 3999, fulfillment: "shipped", options: "none" },
-    "go-fer-stick-pickup": { name: "Go-Fer Stick — Local Pickup", price: 2999, fulfillment: "pickup", options: "none" },
     "chip-screen-spider-shipped": { name: "Chip Screen Spider", price: 5500, fulfillment: "shipped", options: "none" },
   };
 
@@ -135,15 +130,6 @@
 
     const options = collectOptions(form);
     const cart = getCart();
-    const otherFulfillment = cart.find((line) => CATALOG[line.sku]?.fulfillment !== item.fulfillment);
-    if (otherFulfillment) {
-      setStatus(
-        form,
-        "Shipped and local-pickup items must use separate orders. Finish or clear the current cart first.",
-        true,
-      );
-      return;
-    }
 
     const newLine = { sku, quantity: 1, options };
     const existing = cart.find((line) => lineKey(line) === lineKey(newLine));
@@ -204,7 +190,7 @@
       subtotal += unit * quantity;
       const options = optionSummary(line.options).map(escapeHtml).join(" · ");
       return `<article class="cart-line" data-cart-index="${index}">
-        <div><p class="eyebrow">${item.fulfillment === "pickup" ? "LOCAL PICKUP" : "SHIPPED"}</p><h2>${escapeHtml(item.name)}</h2>${options ? `<p>${options}</p>` : ""}</div>
+        <div><p class="eyebrow">SHIPPED</p><h2>${escapeHtml(item.name)}</h2>${options ? `<p>${options}</p>` : ""}</div>
         <label>Quantity<input type="number" min="1" max="10" value="${quantity}" data-cart-quantity></label>
         <strong>${money(unit * quantity)}</strong>
         <button type="button" class="cart-remove" data-cart-remove>Remove</button>
@@ -213,12 +199,10 @@
 
     const subtotalNode = document.querySelector("[data-cart-subtotal]");
     if (subtotalNode) subtotalNode.textContent = money(subtotal);
-    const fulfillment = CATALOG[cart[0].sku].fulfillment;
     document.querySelectorAll("[data-cart-fulfillment]").forEach((node) => {
-      node.textContent = fulfillment === "pickup" ? "Local pickup" : "Shipped order";
+      node.textContent = "Shipped order";
     });
-    document.querySelector("[data-pickup-cart-note]")?.toggleAttribute("hidden", fulfillment !== "pickup");
-    document.querySelector("[data-shipping-cart-note]")?.toggleAttribute("hidden", fulfillment !== "shipped");
+    document.querySelector("[data-shipping-cart-note]")?.removeAttribute("hidden");
   }
 
   async function checkout() {
