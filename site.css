@@ -1250,6 +1250,9 @@ footer small {
   background: var(--paper);
   color: var(--ink);
 }
+.machinist-links .eyebrow {
+  color: var(--green-on-light);
+}
 .resource-grid {
   display: grid;
   gap: 1.5rem;
