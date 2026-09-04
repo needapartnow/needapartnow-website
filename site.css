@@ -1224,3 +1224,123 @@ footer small {
     padding-right: 1.25rem;
   }
 }
+
+/* Machinist resources */
+.machinist-hero {
+  background:
+    radial-gradient(circle at 82% 25%, rgba(184, 255, 0, 0.12), transparent 28rem),
+    linear-gradient(135deg, #050807 0%, #0c120f 100%);
+  padding: clamp(5rem, 10vw, 9rem) 5vw clamp(4rem, 8vw, 7rem);
+}
+.machinist-hero h1 {
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-style: italic;
+  letter-spacing: -0.05em;
+  line-height: 0.92;
+  margin: 1rem 0 1.5rem;
+  text-transform: uppercase;
+}
+.machinist-hero > p:last-child {
+  color: var(--muted);
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  line-height: 1.7;
+  max-width: 800px;
+}
+.machinist-links {
+  background: var(--paper);
+  color: var(--ink);
+}
+.resource-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.resource-card {
+  border: 1px solid #b8bdb8;
+  color: var(--ink);
+  display: block;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  text-decoration: none;
+}
+.resource-card:hover {
+  border-color: var(--green-dark);
+}
+.resource-card h2 {
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  margin: 0.75rem 0 1rem;
+  text-transform: uppercase;
+}
+.resource-card p:not(.eyebrow) {
+  color: #3d433f;
+  line-height: 1.7;
+}
+.resource-card strong {
+  color: var(--green-on-light);
+}
+.cnc-resource {
+  background: #080c0a;
+  border-top: 4px solid var(--green);
+}
+.cnc-resource .section-heading > p:last-child {
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 850px;
+}
+.program-notes {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  margin: 2rem 0;
+  max-width: 1000px;
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+.program-notes h3 {
+  color: var(--green);
+  font-size: 1.4rem;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+.program-notes li {
+  line-height: 1.65;
+  margin-bottom: 0.7rem;
+}
+.program-notes code {
+  color: var(--green);
+}
+.program-warning {
+  border-left: 4px solid #ff9d00;
+  margin: 1.5rem 0 0;
+  padding: 0.75rem 1rem;
+}
+.code-toolbar {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+.copy-status {
+  color: var(--green);
+  font-weight: 800;
+}
+.cnc-code {
+  background: #020403;
+  border: 1px solid var(--line);
+  color: #e9eee9;
+  font-size: clamp(0.78rem, 1.5vw, 1rem);
+  line-height: 1.55;
+  margin: 0;
+  max-height: 760px;
+  overflow: auto;
+  padding: clamp(1rem, 3vw, 2rem);
+  white-space: pre;
+}
+@media (max-width: 700px) {
+  .machinist-hero,
+  .machinist-links,
+  .cnc-resource {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  .resource-grid {
+    grid-template-columns: 1fr;
+  }
+}
