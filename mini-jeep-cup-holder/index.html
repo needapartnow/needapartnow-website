@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="../site.css">
   <link rel="stylesheet" href="../cart.css">
   <script src="../cart.js" defer></script>
+  <link rel="stylesheet" href="../reviews.css">
+  <script src="../reviews.js" defer></script>
   <style>
     .jeep-gallery{display:grid;gap:1.25rem;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:2.5rem}
     .jeep-gallery figure{border:1px solid var(--line);margin:0;padding:.75rem}
@@ -41,7 +43,14 @@
         <div class="price-option"><span>One complete unit</span><strong>$44.99 shipped</strong></div>
         <div class="price-option"><span>Pair — one for each side</span><strong>$74.99 shipped</strong></div>
       </div>
-      <p class="product-detail-copy"><strong>Online ordering is coming soon.</strong></p>
+      <div class="cart-buy-box" data-cart-product="mini-jeep-cup-holder">
+        <div class="cart-button-row">
+          <button class="button button-primary cart-add-button" type="button" data-cart-sku="mini-jeep-cup-holder-single-shipped">Add One to Cart</button>
+          <button class="button button-primary cart-add-button" type="button" data-cart-sku="mini-jeep-cup-holder-pair-shipped">Add Pair to Cart</button>
+        </div>
+        <p class="cart-status" data-cart-status aria-live="polite"></p>
+        <a class="button button-secondary cart-view-button" href="../cart/">View Cart</a>
+      </div>
     </div>
     <figure class="product-main-photo">
       <img src="images/11455.webp" alt="Green mini Jeep cup holder and organizer mounted on the passenger-side rail with two drinks">
@@ -67,6 +76,29 @@
       <figure><img src="images/11462.webp" alt="Angled view of the mini Jeep organizer holding two bottles and a phone"><figcaption>Keeps the essentials beside the seat.</figcaption></figure>
       <figure><img src="images/11461.webp" alt="Side view of the mini Jeep organizer with a water bottle and sports drink"><figcaption>Open-sided drink holders accommodate cans and bottles.</figcaption></figure>
       <figure><img src="images/11456.webp" alt="Mini Jeep organizer mounted beside the rear seat"><figcaption>Compact enough to stay outside the seating area.</figcaption></figure>
+    </div>
+  </section>
+
+<section class="review-section" data-review-product="mini-jeep-cup-holder">
+    <div class="review-layout">
+      <div>
+        <p class="eyebrow">CUSTOMER REVIEWS</p>
+        <h2>What people say</h2>
+        <div class="review-list" data-review-list aria-live="polite"><p class="review-empty">No approved reviews yet.</p></div>
+      </div>
+      <form class="review-form" data-review-form>
+        <p class="eyebrow">WRITE A REVIEW</p>
+        <h2>Review Mini Jeep Cup Holder</h2>
+        <label>Your name<input name="name" maxlength="60" autocomplete="name" required></label>
+        <label>Email <span class="private-note">(kept private)</span><input name="email" type="email" maxlength="254" autocomplete="email" required></label>
+        <label>Rating<select name="rating" required><option value="">Choose a rating</option><option value="5">5 stars</option><option value="4">4 stars</option><option value="3">3 stars</option><option value="2">2 stars</option><option value="1">1 star</option></select></label>
+        <label>Review title<input name="title" maxlength="80" required></label>
+        <label>Your review<textarea name="body" maxlength="1200" required></textarea></label>
+        <label class="review-honeypot" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
+        <button class="button button-primary" type="submit">Submit Review</button>
+        <p class="review-status" data-review-status aria-live="polite"></p>
+        <p class="private-note">Reviews are checked before they appear publicly.</p>
+      </form>
     </div>
   </section>
 
