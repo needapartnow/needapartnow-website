@@ -21,6 +21,8 @@
     "cousin-louie-shipped": { name: "Cousin Louie Knife Sharpener", price: 3599, fulfillment: "shipped", options: "single-body" },
     "go-fer-stick-shipped": { name: "Go-Fer Stick", price: 3999, fulfillment: "shipped", options: "none" },
     "chip-screen-spider-shipped": { name: "Chip Screen Spider", price: 5500, fulfillment: "shipped", options: "none" },
+    "mini-jeep-cup-holder-single-shipped": { name: "Mini Jeep Cup Holder & Storage Organizer — One Unit", price: 4499, fulfillment: "shipped", options: "none" },
+    "mini-jeep-cup-holder-pair-shipped": { name: "Mini Jeep Cup Holder & Storage Organizer — Pair", price: 7499, fulfillment: "shipped", options: "none" },
   };
 
   function getCart() {
@@ -190,7 +192,7 @@
       subtotal += unit * quantity;
       const options = optionSummary(line.options).map(escapeHtml).join(" · ");
       return `<article class="cart-line" data-cart-index="${index}">
-        <div><p class="eyebrow">SHIPPED</p><h2>${escapeHtml(item.name)}</h2>${options ? `<p>${options}</p>` : ""}</div>
+        <div><p class="eyebrow">FREE SHIPPING</p><h2>${escapeHtml(item.name)}</h2>${options ? `<p>${options}</p>` : ""}</div>
         <label>Quantity<input type="number" min="1" max="10" value="${quantity}" data-cart-quantity></label>
         <strong>${money(unit * quantity)}</strong>
         <button type="button" class="cart-remove" data-cart-remove>Remove</button>
@@ -200,7 +202,7 @@
     const subtotalNode = document.querySelector("[data-cart-subtotal]");
     if (subtotalNode) subtotalNode.textContent = money(subtotal);
     document.querySelectorAll("[data-cart-fulfillment]").forEach((node) => {
-      node.textContent = "Shipped order";
+      node.textContent = "Free-shipping order";
     });
     document.querySelector("[data-shipping-cart-note]")?.removeAttribute("hidden");
   }
