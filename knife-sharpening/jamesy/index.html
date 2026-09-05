@@ -14,6 +14,8 @@
 <link rel="stylesheet" href="../../cart.css">
 <script src="../../cart.js" defer>
 </script>
+<link rel="stylesheet" href="../../reviews.css">
+<script src="../../reviews.js" defer></script>
 </head>
 <body>
 <main class="product-draft">
@@ -53,7 +55,8 @@
 <p class="eyebrow">BULLDOZER TEST</p>
 <h2>Watch Jamesy get run over by a bulldozer</h2>
 <div class="bulldozer-video">
-<iframe src="https://www.youtube.com/embed/Yeuml0ESG48" title="Jamesy knife sharpener bulldozer test" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/Yeuml0ESG48" title="Jamesy knife sharpener bulldozer test" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+</iframe>
 </div>
 <p>We put Jamesy under a John Deere bulldozer and ran it over.</p>
 </section>
@@ -161,6 +164,23 @@
 </div>
 
 
+</section>
+<section class="review-section" data-review-product="jamesy">
+<div class="review-layout">
+<div><p class="eyebrow">CUSTOMER REVIEWS</p><h2>What people say</h2><div class="review-list" data-review-list aria-live="polite"><p class="review-empty">No approved reviews yet.</p></div></div>
+<form class="review-form" data-review-form>
+<p class="eyebrow">WRITE A REVIEW</p><h2>Review Jamesy</h2>
+<label>Your name<input name="name" maxlength="60" autocomplete="name" required></label>
+<label>Email <span class="private-note">(kept private)</span><input name="email" type="email" maxlength="254" autocomplete="email" required></label>
+<label>Rating<select name="rating" required><option value="">Choose a rating</option><option value="5">5 stars</option><option value="4">4 stars</option><option value="3">3 stars</option><option value="2">2 stars</option><option value="1">1 star</option></select></label>
+<label>Review title<input name="title" maxlength="80" required></label>
+<label>Your review<textarea name="body" maxlength="1200" required></textarea></label>
+<label class="review-honeypot" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
+<button class="button button-primary" type="submit">Submit Review</button>
+<p class="review-status" data-review-status aria-live="polite"></p>
+<p class="private-note">Reviews are checked before they appear publicly.</p>
+</form>
+</div>
 </section>
 <section class="sharp-section how-to-link-section">
 <div class="two-col">
