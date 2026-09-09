@@ -15,8 +15,6 @@
     "light pink translucent",
   ];
   const CATALOG = {
-    "susie-shipped": { name: "Susie Knife Sharpener", price: 6599, fulfillment: "shipped", options: "two-component-strop" },
-    "grandma-patsy-shipped": { name: "Grandma Patsy Knife Sharpener", price: 5599, fulfillment: "shipped", options: "two-component" },
     "jamesy-shipped": { name: "Jamesy Knife Sharpener", price: 4599, fulfillment: "shipped", options: "single-body" },
     "cousin-louie-shipped": { name: "Cousin Louie Knife Sharpener", price: 3599, fulfillment: "shipped", options: "single-body" },
     "go-fer-stick-shipped": { name: "Go-Fer Stick", price: 3999, fulfillment: "shipped", options: "none" },
