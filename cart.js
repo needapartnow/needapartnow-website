@@ -15,6 +15,7 @@
     "light pink translucent",
   ];
   const CATALOG = {
+    "grandma-patsy-shipped": { name: "Grandma Patsy Knife Sharpener", price: 5599, fulfillment: "shipped", options: "none" },
     "jamesy-shipped": { name: "Jamesy Knife Sharpener", price: 4599, fulfillment: "shipped", options: "single-body" },
     "cousin-louie-shipped": { name: "Cousin Louie Knife Sharpener", price: 3599, fulfillment: "shipped", options: "single-body" },
     "go-fer-stick-shipped": { name: "Go-Fer Stick", price: 3999, fulfillment: "shipped", options: "none" },
@@ -26,7 +27,8 @@
   function getCart() {
     try {
       const parsed = JSON.parse(localStorage.getItem(CART_KEY) || "[]");
-      return Array.isArray(parsed) ? parsed.filter((line) => CATALOG[line.sku]) : [];
+      return Array.isArray(parsed) ? parsed.filter((line) => CATALOG[line.sku] &&
+        (line.sku !== "grandma-patsy-shipped" || Object.keys(line.options || {}).length === 0)) : [];
     } catch {
       return [];
     }
